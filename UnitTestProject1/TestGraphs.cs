@@ -184,7 +184,7 @@ namespace UnitTestProject1
 
             for (char c = 'A'; c < 'H'; c++)
             {
-                graph6.AddEdge(c.ToString(), (c + 1).ToString());
+                graph6.AddEdge(c.ToString(), ((char) (c + 1)).ToString());
             }
 
             char prev = 'A';
@@ -214,13 +214,14 @@ namespace UnitTestProject1
 
             for (char c = 'H'; c > 'A'; c--)
             {
-                graph7.AddEdge(c.ToString(), (c + 1).ToString());
+                graph7.AddEdge(c.ToString(), ((char) (c - 1)).ToString());
             }
 
             graph7.AddEdge("M", "L");
             graph7.AddEdge("L", "K");
             graph7.AddEdge("K", "J");
-            graph7.AddEdge("J", "A");
+            graph7.AddEdge("J", "I");
+            graph7.AddEdge("I", "A");
         }
     }
 }
