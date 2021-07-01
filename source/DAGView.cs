@@ -688,12 +688,9 @@ namespace AxiomProfiler
                             Patterns.Add(CurPattern);
                         }
                     }
-                    else
-                    {
-                        List<Quantifier> NewPattern = new List<Quantifier>(CurPattern);
-                        NewPattern.Add(ChildQuant);
-                        PathStack.Add(new Tuple<Node, List<Quantifier>>(Child, NewPattern));
-                    }
+                    List<Quantifier> NewPattern = new List<Quantifier>(CurPattern);
+                    NewPattern.Add(ChildQuant);
+                    PathStack.Add(new Tuple<Node, List<Quantifier>>(Child, NewPattern));
                 }
             }
             return Patterns;
@@ -729,12 +726,9 @@ namespace AxiomProfiler
                             Patterns.Add(CurPattern);
                         }
                     }
-                    else
-                    {
-                        List<Quantifier> NewPattern = new List<Quantifier>(CurPattern);
-                        NewPattern.Add(ChildQuant);
-                        PathStack.Add(new Tuple<Node, List<Quantifier>>(Parent, NewPattern));
-                    }
+                    List<Quantifier> NewPattern = new List<Quantifier>(CurPattern);
+                    NewPattern.Add(ChildQuant);
+                    PathStack.Add(new Tuple<Node, List<Quantifier>>(Parent, NewPattern));
                 }
             }
             return Patterns;
