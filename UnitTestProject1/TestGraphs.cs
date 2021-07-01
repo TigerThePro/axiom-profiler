@@ -188,7 +188,7 @@ namespace UnitTestProject1
             }
 
             char prev = 'A';
-            for (char c = 'I'; c < 'M'; c++)
+            for (char c = 'I'; c <= 'M'; c++)
             {
                 graph6.AddEdge(prev.ToString(), c.ToString());
                 prev = c;
@@ -214,7 +214,7 @@ namespace UnitTestProject1
 
             for (char c = 'H'; c > 'A'; c--)
             {
-                graph6.AddEdge(c.ToString(), (c + 1).ToString());
+                graph7.AddEdge(c.ToString(), (c + 1).ToString());
             }
 
             graph7.AddEdge("M", "L");
