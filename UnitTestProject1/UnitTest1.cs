@@ -51,10 +51,8 @@ namespace UnitTestProject1
         {
             List<List<Quantifier>> result = DAGView.AllDownPatterns(Graphs.graph3.FindNode("A"), 8);
             List<Quantifier> expected1 = new List<Quantifier>() { Graphs.Quants[0], Graphs.Quants[1] };
-            List<Quantifier> expected2 = new List<Quantifier>() { Graphs.Quants[0], Graphs.Quants[1], Graphs.Quants[0], Graphs.Quants[1] };
-            Assert.AreEqual(2, result.Count);
+            Assert.AreEqual(1, result.Count);
             Assert.IsTrue(DAGView.ContainPattern(ref result, ref expected1));
-            Assert.IsTrue(DAGView.ContainPattern(ref result, ref expected2));
         }
 
         // Test if AllDownPatterns recogizes pattern that contain
@@ -209,10 +207,8 @@ namespace UnitTestProject1
         {
             List<List<Quantifier>> result = DAGView.AllUpPatterns(Graphs.graph5.FindNode("A"), 8);
             List<Quantifier> expected1 = new List<Quantifier>() { Graphs.Quants[0], Graphs.Quants[1] };
-            List<Quantifier> expected2 = new List<Quantifier>() { Graphs.Quants[0], Graphs.Quants[1], Graphs.Quants[0], Graphs.Quants[1] };
-            Assert.AreEqual(2, result.Count);
+            Assert.AreEqual(1, result.Count);
             Assert.IsTrue(DAGView.ContainPattern(ref result, ref expected1));
-            Assert.IsTrue(DAGView.ContainPattern(ref result, ref expected2));
         }
 
         // Test if AllDownPatterns recogizes pattern that contain
