@@ -115,7 +115,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="TestGraphs.cs" />
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="FindPathTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
