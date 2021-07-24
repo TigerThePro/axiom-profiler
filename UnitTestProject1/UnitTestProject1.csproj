@@ -114,9 +114,11 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SubstructureTest.cs" />
     <Compile Include="TestGraphs.cs" />
     <Compile Include="FindPathTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestGraphs2.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

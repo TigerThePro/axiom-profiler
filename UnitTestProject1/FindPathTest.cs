@@ -5,7 +5,9 @@ using AxiomProfiler;
 using AxiomProfiler.QuantifierModel;
 using Microsoft.Msagl.Drawing;
 
-namespace UnitTestProject1
+// Unit tests for that find path feature.
+// https://docs.google.com/document/d/1SJspfBecgkVT9U8xC-MvQ_NPDTGVfg0yqq7YjJ3ma2s/edit?usp=sharing
+namespace FindPathTest
 {
     // This test file is created to test some of pathExplanationButton_Click's helper functions
     // AllDownPatterns

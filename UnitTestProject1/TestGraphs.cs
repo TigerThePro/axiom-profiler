@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Microsoft.Msagl.Drawing;
 using AxiomProfiler.QuantifierModel;
 
-namespace UnitTestProject1
+namespace FindPathTest
 {
     // A visulization and explination for the test graphs can be found here
     // https://docs.google.com/document/d/1SJspfBecgkVT9U8xC-MvQ_NPDTGVfg0yqq7YjJ3ma2s/edit?usp=sharing
