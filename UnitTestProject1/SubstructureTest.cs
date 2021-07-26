@@ -18,10 +18,30 @@ namespace SubstructureTest
     public class RefindPatternTest
     {
         static TestGraphs2 Graphs = new TestGraphs2();
+        static List<Quantifier> pattern = new List<Quantifier>() { Graphs.Quants[1], Graphs.Quants[2], Graphs.Quants[0] };
+
         [TestMethod]
         public void RefindPatternTest1()
         {
-            //Assert.AreEqual(1, 2);
+            List<Quantifier> result = DAGView.RefindPattern(ref Graphs.path1, ref pattern);
+            List<Quantifier> expected = new List<Quantifier>() { Graphs.Quants[0], Graphs.Quants[1], Graphs.Quants[2] };
+            Assert.AreEqual(expected.Count, result.Count);
+            for (int i = 0; i < expected.Count; i++)
+            {
+                Assert.AreEqual(expected[i], result[i]);
+            }
+        }
+
+        [TestMethod]
+        public void RefindPatternTest2()
+        {
+            List<Quantifier> result = DAGView.RefindPattern(ref Graphs.path2, ref pattern);
+            List<Quantifier> expected = new List<Quantifier>() { Graphs.Quants[2], Graphs.Quants[0], Graphs.Quants[1] };
+            Assert.AreEqual(expected.Count, result.Count);
+            for (int i = 0; i < expected.Count; i++)
+            {
+                Assert.AreEqual(expected[i], result[i]);
+            }
         }
     }
 

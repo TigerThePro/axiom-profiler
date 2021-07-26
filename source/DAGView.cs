@@ -847,5 +847,17 @@ namespace AxiomProfiler
             }
             _viewer.Invalidate();
         }
+
+
+        // The functions below are meant for the feature of finding repeating substruture
+        // details are here: https://docs.google.com/document/d/1KxL2duPp-eAQk3P9TdL9vpipSBtMzrFYqsXMsIzQhnY/edit?usp=sharing
+
+        // 
+        public static List<Quantifier> RefindPattern(ref List<Node> path, ref List<Quantifier> oldPattern)
+        {
+            List<Quantifier> result = new List<Quantifier>();
+
+            return result;
+        }
     }
 }
