@@ -48,15 +48,29 @@ namespace SubstructureTest
     // Given a cycle find the 'abstract strucutre' of this cycle that should occur at other full cycles
     // The strucurre is represent as a spanning tree "rooted" on the last node of the cycle
     [TestClass]
-    public class MakeSpanningTreeTest
+    public class FindSubStructureTest
     {
-
+        static TestGraphs2 Graphs = new TestGraphs2();
+        
+        [TestMethod]
+        public void FindSubStructureTest1()
+        {
+            //List<List<Quantifier>> = DAGView.FindSubStrucutre(Graphs.graph1.FindNode("3, "))
+            Graph g = new Graph();
+            Node n = new Node("1");
+            n.UserData = "123";
+            g.AddNode(n);
+            Console.WriteLine(g.FindNode("1").UserData);
+            g.FindNode("1").UserData = "456";
+            Console.WriteLine(g.FindNode("1").UserData);
+            Assert.Equals("456", g.FindNode("1").UserData);
+        }
     }
 
     // Using the path, and newly found spanning tree,
     // select a subgrph around the path that stasfying the spanning tree
     [TestClass]
-    public class FindSubStructureTest
+    public class FindSubGraphTest
     {
 
     }

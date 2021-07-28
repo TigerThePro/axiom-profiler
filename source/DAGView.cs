@@ -852,11 +852,21 @@ namespace AxiomProfiler
         // The functions below are meant for the feature of finding repeating substruture
         // details are here: https://docs.google.com/document/d/1KxL2duPp-eAQk3P9TdL9vpipSBtMzrFYqsXMsIzQhnY/edit?usp=sharing
 
-        // 
+        // RefindPattern
+        // redfine the pattern so the cycle ends on a full cycle of the pattern
+        // e.g. A->B->C->A->B->C->A, the re find pattern would be B->C->A
         public static List<Quantifier> RefindPattern(ref List<Node> path, ref List<Quantifier> oldPattern)
         {
             List<Quantifier> result = new List<Quantifier>();
+            // TODO
+            return result;
+        }
 
+        public static List<List<Quantifier>> FindSubStrucutre(ref Node root, int bound)
+        {
+            List<Quantifier> _root = new List<Quantifier>() { ((Instantiation)root.UserData).Quant };
+            List<List<Quantifier>> result = new List<List<Quantifier>>() { _root };
+            //TODO
             return result;
         }
     }
